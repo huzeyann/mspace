@@ -1,0 +1,12 @@
+title: Nerfies
+description: Deformable Neural Radiance Fields
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap 
