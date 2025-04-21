@@ -169,6 +169,70 @@
 
 
 
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Background</h2>
+    
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <h3 class="title is-4">What are we trying to do?</h3>
+          <ol>
+            <li><strong>Interpolation:</strong> <br/>
+              Generate new images by interpolating between existing ones</li>
+            <li><strong>Visual Analogy by Path Lifting:</strong> <br/>
+              Step1: Given Image A1 → Image B1 defines a path direction<br/>
+              Step2: Lift the path to Image A2 → Image B2, interpolate and generate in the lifted direction
+            </li>
+          </ol>
+
+          <h3 class="title is-4">What is Mood Space?</h3>
+          <p>
+            Mood Space is our solution to enable smooth transitions between visually disconnected concepts (e.g. duck -> toilet paper).
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+        <b style="font-size: 200%">Interpolation</b> <br/>
+        <br/>
+        We interpolate two un-related images to generate a surreal object. <br/>
+        <br/>
+        Have you ever seen a dogfish?
+      </h2>
+      <img src="./static/images/mspace_dogfish.jpg" height="100%">
+      <img src="./static/images/intp_3.jpg" width="100%">
+      <img src="./static/images/money_plot.jpg" width="100%">
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+        <b style="font-size: 200%">Visual Analogy by Path Lifting</b> <br/>
+        <br/>
+        Given Image A1 → Image B1, What is Image A2 → Image B2?
+      </h2>
+      <video id="teaser" controls autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/mspace_analogy.mp4"
+                type="video/mp4">
+      </video>
+      <img src="./static/images/analogy_4.jpg" width="100%">
+    </div>
+  </div>
+</section>
+
+
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -198,66 +262,16 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Background</h2>
-    
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <div class="content has-text-justified">
-          <h3 class="title is-4">What are we trying to do?</h3>
-          <ol>
-            <li><strong>Interpolation:</strong> Generate new images by interpolating between existing ones</li>
-            <li><strong>Visual Analogy:</strong> Given Image A1 → Image B1, determine what Image A2 → Image B2 should be</li>
-          </ol>
-
-          <h3 class="title is-4">What is Mood Space?</h3>
-          <p>
-            Mood Space is our solution to enable smooth transitions between visually disconnected concepts (e.g. duck -> toilet paper).
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="./static/images/mspace_dogfish.jpg" height="100%">
-      <h2 class="subtitle has-text-centered">
-        <b>Interpolation Example</b> <br/>
-        We interpolate between images to generate a new image.
-      </h2>
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" controls autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/mspace_analogy.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <b>Visual Analogy Example</b> <br/>
-        Given Image A1 → Image B1, What is Image A2 → Image B2?
-      </h2>
-    </div>
-  </div>
-</section>
-
 
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Technical Approach</h2>
+    <h2 class="title is-3 has-text-centered">How to interpolate?</h2>
     
     <div class="columns is-centered">
       <div class="column is-four-fifths">
         <div class="content has-text-justified">
-          <h3 class="title is-4">How does it work?</h3>
+          <!-- <h3 class="title is-4">How does it work?</h3> -->
           <p>
             Our approach involves several key components:
           </p>
@@ -446,7 +460,7 @@
   </div>
 </section>
 
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Results</h2>
     
@@ -479,9 +493,48 @@
       </div>
     </div>
   </div>
+</section> -->
+
+
+
+
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-group_0">
+          <img poster="" id="group_0" src="./static/images/group_0.jpg" loading="lazy">
+        </div>
+        <div class="item item-group_1">
+          <img poster="" id="group_1" src="./static/images/group_1.jpg" loading="lazy">
+        </div>
+        <div class="item item-group_2">
+          <img poster="" id="group_2" src="./static/images/group_2.jpg" loading="lazy">
+        </div>
+        <div class="item item-group_3">
+          <img poster="" id="group_3" src="./static/images/group_3.jpg" loading="lazy">
+        </div>
+        <div class="item item-group_4">
+          <img poster="" id="group_4" src="./static/images/group_4.jpg" loading="lazy">
+        </div>
+        <div class="item item-group_5">
+          <img poster="" id="group_5" src="./static/images/group_5.jpg" loading="lazy">
+        </div>
+        <div class="item item-group_6">
+          <img poster="" id="group_6" src="./static/images/group_6.jpg" loading="lazy">
+        </div>
+        <div class="item item-group_7">
+          <img poster="" id="group_7" src="./static/images/group_7.jpg" loading="lazy">
+        </div>
+        <div class="item item-group_8">
+          <img poster="" id="group_8" src="./static/images/group_8.jpg" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
-
 
 <section class="hero is-light is-small">
   <div class="hero-body">
@@ -516,44 +569,6 @@
         </div>
         <div class="item item-analogy_10">
           <img poster="" id="analogy_10" src="./static/images/analogy/duck_pixel_to_dinosaur_pixel_9_000.jpg" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-group_0">
-          <img poster="" id="group_0" src="./static/images/group_0.jpg" loading="lazy">
-        </div>
-        <div class="item item-group_1">
-          <img poster="" id="group_1" src="./static/images/group_1.jpg" loading="lazy">
-        </div>
-        <div class="item item-group_2">
-          <img poster="" id="group_2" src="./static/images/group_2.jpg" loading="lazy">
-        </div>
-        <div class="item item-group_3">
-          <img poster="" id="group_3" src="./static/images/group_3.jpg" loading="lazy">
-        </div>
-        <div class="item item-group_4">
-          <img poster="" id="group_4" src="./static/images/group_4.jpg" loading="lazy">
-        </div>
-        <div class="item item-group_5">
-          <img poster="" id="group_5" src="./static/images/group_5.jpg" loading="lazy">
-        </div>
-        <div class="item item-group_6">
-          <img poster="" id="group_6" src="./static/images/group_6.jpg" loading="lazy">
-        </div>
-        <div class="item item-group_7">
-          <img poster="" id="group_7" src="./static/images/group_7.jpg" loading="lazy">
-        </div>
-        <div class="item item-group_8">
-          <img poster="" id="group_8" src="./static/images/group_8.jpg" loading="lazy">
         </div>
       </div>
     </div>
