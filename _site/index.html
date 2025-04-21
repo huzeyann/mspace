@@ -173,22 +173,70 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Background</h2>
+    <h2 class="title is-3 has-text-centered">How to be creative?</h2>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+        <b style="font-size: 150%">Blending Creativity: connecting two distinct concepts</b> <br/>
+      </h2>
+        <video id="teaser" controls autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/mspace_intp.mp4"
+                  type="video/mp4">
+        </video>
+      
+      <img src="./static/images/mspace_dogfish.jpg" height="100%">
+
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+        <b style="font-size: 150%">Combinational Creativity: path lifting</b> <br/>
+        <!-- Visual Analogy by Path Lifting <br/> -->
+      </h2>
+      <video id="teaser" controls autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/mspace_analogy.mp4"
+        type="video/mp4">
+      </video>
+      <p>
+        Given Image A1 → Image B1, What is Image A2 → Image B2?
+      </p>
+      <img src="./static/images/analogy_4.jpg" width="100%">
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">How to be creative?</h2>
     
     <div class="columns is-centered">
       <div class="column is-four-fifths">
         <div class="content has-text-justified">
-          <h3 class="title is-4">What are we trying to do?</h3>
+          <!-- <h3 class="title is-4">What are we trying to do?</h3> -->
           <ol>
-            <li><strong>`Connect` Visual Concepts:</strong> <br/>
+            <li><strong>Blending creativity by connecting two distinct concepts:</strong> <br/>
               Connect concepts that are not directly related, e.g. duck -> toilet paper <br/>
-              Generate interpolation between them
             </li>
-            <li><strong>`Express` Combinational Creativity:</strong> <br/>
+            <li><strong>Combinational creativity by path lifting:</strong> <br/>
               Step1: Given Image A1 → Image B1 defines a path direction<br/>
               Step2: Lift the path to Image A2 → Image B2, interpolate and express in the lifted direction
             </li>
           </ol>
+
+          <h3 class="title is-4">What's the challenge?</h3>
+          <p>
+            The embedding space is not a dense manifold, it has holes, interpolation falls into holes. <br/>
+          </p>
 
           <h3 class="title is-4">What is Mood Space?</h3>
           <ul>
@@ -203,68 +251,125 @@
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h2 class="subtitle has-text-centered">
-        <b style="font-size: 200%">`Connect` Visual Concepts</b> <br/>
-        <br/>
-        We interpolate two un-related images to generate a surreal object. <br/>
-        <br/>
-        Have you ever seen a dogfish?
-      </h2>
-      <img src="./static/images/mspace_dogfish.jpg" height="100%">
-      <img src="./static/images/intp_3.jpg" width="100%">
-      <img src="./static/images/money_plot.jpg" width="100%">
-    </div>
-  </div>
-</section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h2 class="subtitle has-text-centered">
-        <b style="font-size: 200%">`Express` Combinational Creativity</b> <br/>
-        <br/>
-        Visual Analogy by Path Lifting <br/>
-        Given Image A1 → Image B1, What is Image A2 → Image B2?
-      </h2>
-      <video id="teaser" controls autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/mspace_analogy.mp4"
-                type="video/mp4">
-      </video>
-      <img src="./static/images/analogy_4.jpg" width="100%">
-    </div>
-  </div>
-</section>
+
 
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
+    <h2 class="title is-3 has-text-centered">How to improve creativity? Mood Space</h2>
+    
+    <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-            Expressing complex concepts is easy when they can be labeled or quantified, but many ideas are hard to define yet instantly recognizable.  
-            We propose a Mood Board, where users convey abstract concepts with examples that hint at the intended direction of attribute changes.   
-          </p>
-          <p>
-            We compute an underlying Mood Space that 1) factors out irrelevant features and 2) finds the connections between images, thus bringing relevant concepts closer. 
-            We invent a fibration computation to compress/decompress pre-trained features into/from a compact space, 50-100x smaller. 
-            The main innovation is learning to mimic the pairwise affinity relationship of the image tokens across exemplars.   
-            To focus on the coarse-to-fine hierarchical structures in the Mood Space, 
-            we compute the top eigenvector structure from the affinity matrix and define a loss in the eigenvector space. 
-          </p>
-          <p>
-            The resulting Mood Space is locally linear and compact, allowing image-level operations, such as object averaging, visual analogy, and pose transfer, to be performed as a simple vector operation in Mood Space.  
-            Our learning is efficient in computation without any fine-tuning, needs only a few (2-20) exemplars, and takes less than a minute to learn.
-          </p>
+          <ul>
+            <li>Mood Space connects disconnected visual concepts, e.g. duck -> toilet paper</li>
+            <li>Mood Space only picks up most relevant concepts from Mood Board</li>
+          </ul>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" controls autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/mspace_intro.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <b>Mood Space Introduction</b> <br/>
+        A low-dimensional dense space that connects disconnected visual concepts.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" controls autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/m1.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <b>Mood Space Interpolation</b> <br/>
+        Linear interpolation in Mood Space transforms to a curved path in CLIP space, avoiding holes.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" controls autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/mspace_compress.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <b>Mood Space Implementation</b> <br/>
+        Transformed by learned point-wise MLP, trained with spectral clustering and reconstruction loss.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <details>
+        <summary class="button is-link is-light"><h2 class="subtitle">[Click to expand <span class="details-icon">▼</span>] Spectral Clustering Details</h2></summary>
+        <div class="content">
+          <video id="teaser" controls muted loop playsinline height="100%">
+            <source src="./static/videos/ncut_diff.mp4"
+                    type="video/mp4">
+          </video>
+          <b>NCut is differentiable.</b> <br/>
+          SVD Eigvec can be shifted or rotated, we use invariant loss (outter product of eigvec). <br/>
+          We use partially shifted eigvec to prevent large window shifts. <br/>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">How to control creativity? Mood Board</h2>
+    
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            Mood Board is a set of 2~20 images that are used to train the Mood Space. <br/>
+            Mood Space only picks up most relevant concepts from Mood Board.
+          </p>
+          <ul>
+            <li>e.g. 20 faces images Mood Board -> face is the most relevant concept</li>
+            <li>e.g. 20 first person images Mood Board -> hand is the most relevant concept</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" controls autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/mood_board.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <b>Mood Board Interface</b> <br/>
+        Control the Mood Space through context images to compute affinity and pick up relevant features.
+      </h2>
+    </div>
   </div>
 </section>
 
@@ -272,20 +377,15 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">How to interpolate?</h2>
+    <h2 class="title is-3 has-text-centered">How to generate the created visual concept?</h2>
     
     <div class="columns is-centered">
       <div class="column is-four-fifths">
         <div class="content has-text-justified">
           <!-- <h3 class="title is-4">How does it work?</h3> -->
           <p>
-            Our approach involves several key components:
+            <strong>Image Conditioned Diffusion Model:</strong> Using IP-Adapter and CLIP embeddings for interpolation</li>
           </p>
-          <ol>
-            <li><strong>Image Conditioned Diffusion Model:</strong> Using IP-Adapter and CLIP embeddings for interpolation</li>
-            <li><strong>Mood Space:</strong> A low-dimensional dense space that enables linear interpolation</li>
-            <li><strong>Spectral Clustering:</strong> Used to compute the underlying structure of the Mood Space</li>
-          </ol>
         </div>
       </div>
     </div>
@@ -366,136 +466,21 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">How to connect concepts? Mood Space</h2>
-    
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <div class="content has-text-justified">
-          <p>
-            Our solution to the limitations of CLIP space is the Mood Space, which:
-          </p>
-          <ul>
-            <li>Connects disconnected visual concepts</li>
-            <li>Provides a low-dimensional dense space for linear interpolation</li>
-            <li>Mood Space only picks up most relevant concepts from Mood Board</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" controls autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/mspace_intro.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <b>Mood Space Introduction</b> <br/>
-        A low-dimensional dense space that connects disconnected visual concepts.
-      </h2>
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" controls autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/m1.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <b>Mood Space Interpolation</b> <br/>
-        Linear interpolation in Mood Space transforms to a curved path in CLIP space, avoiding holes.
-      </h2>
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" controls autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/mspace_compress.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <b>Mood Space Implementation</b> <br/>
-        Transformed by learned point-wise MLP, trained with spectral clustering and reconstruction loss.
-      </h2>
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <details>
-        <summary class="button is-link is-light"><h2 class="subtitle">[Click to expand <span class="details-icon">▼</span>] Spectral Clustering Details</h2></summary>
-        <div class="content">
-          <video id="teaser" controls muted loop playsinline height="100%">
-            <source src="./static/videos/ncut_diff.mp4"
-                    type="video/mp4">
-          </video>
-          <b>NCut is differentiable.</b> <br/>
-          SVD Eigvec can be shifted or rotated, we use invariant loss (outter product of eigvec). <br/>
-          We use partially shifted eigvec to prevent large window shifts. <br/>
-        </div>
-      </details>
-    </div>
-  </div>
-</section>
 
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">How to control Mood Space? Mood Board</h2>
+    <h2 class="title is-3 has-text-centered">Results</h2>
     
     <div class="columns is-centered">
-      <div class="column is-four-fifths">
         <div class="content has-text-justified">
-          <p>
-            Mood Board is a set of images that are used to train the Mood Space. <br/>
-            Mood Space only picks up most relevant concepts from Mood Board.
-          </p>
-          <ul>
-            <li>e.g. 100 faces images Mood Board -> face is the most relevant concept</li>
-            <li>e.g. 100 first person images Mood Board -> hand is the most relevant concept</li>
-          </ul>
+          <img src="./static/images/intp_3.jpg" width="100%">
         </div>
-      </div>
     </div>
-  </div>
-</section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" controls autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/mood_board.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <b>Mood Board Interface</b> <br/>
-        Control the Mood Space through context images to compute affinity and pick up relevant features.
-      </h2>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">More Results</h2>
-    
     <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <div class="content has-text-justified">
-
-        </div>
+      <div class="content has-text-justified">
+        <img src="./static/images/money_plot.jpg" width="100%">
       </div>
     </div>
   </div>
@@ -622,6 +607,37 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Expressing complex concepts is easy when they can be labeled or quantified, but many ideas are hard to define yet instantly recognizable.  
+            We propose a Mood Board, where users convey abstract concepts with examples that hint at the intended direction of attribute changes.   
+          </p>
+          <p>
+            We compute an underlying Mood Space that 1) factors out irrelevant features and 2) finds the connections between images, thus bringing relevant concepts closer. 
+            We invent a fibration computation to compress/decompress pre-trained features into/from a compact space, 50-100x smaller. 
+            The main innovation is learning to mimic the pairwise affinity relationship of the image tokens across exemplars.   
+            To focus on the coarse-to-fine hierarchical structures in the Mood Space, 
+            we compute the top eigenvector structure from the affinity matrix and define a loss in the eigenvector space. 
+          </p>
+          <p>
+            The resulting Mood Space is locally linear and compact, allowing image-level operations, such as object averaging, visual analogy, and pose transfer, to be performed as a simple vector operation in Mood Space.  
+            Our learning is efficient in computation without any fine-tuning, needs only a few (2-20) exemplars, and takes less than a minute to learn.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
   </div>
 </section>
 
