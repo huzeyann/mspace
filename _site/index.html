@@ -191,9 +191,12 @@
           </ol>
 
           <h3 class="title is-4">What is Mood Space?</h3>
-          <p>
-            Mood Space is our solution to enable smooth transitions between visually disconnected concepts (e.g. duck -> toilet paper).
-          </p>
+          <ul>
+            <li><b>Connect Visual Concepts:</b> <br/>
+              Mood Space enable smooth transitions between disconnected concepts (e.g. duck -> toilet paper)</li>
+            <li><b>Focus on Relevant Concepts:</b> <br/>
+              Mood Space only pick up most relevant concepts within the Mood Board images</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -376,7 +379,7 @@
           <ul>
             <li>Connects disconnected visual concepts</li>
             <li>Provides a low-dimensional dense space for linear interpolation</li>
-            <li>Enables efficient sampling without fine-tuning</li>
+            <li>Mood Space only picks up most relevant concepts from Mood Board</li>
           </ul>
         </div>
       </div>
@@ -448,6 +451,28 @@
   </div>
 </section>
 
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">How to control Mood Space? Mood Board</h2>
+    
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            Mood Board is a set of images that are used to train the Mood Space. <br/>
+            Mood Space only picks up most relevant concepts from Mood Board.
+          </p>
+          <ul>
+            <li>e.g. 100 faces images Mood Board -> face is the most relevant concept</li>
+            <li>e.g. 100 first person images Mood Board -> hand is the most relevant concept</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -462,44 +487,19 @@
     </div>
   </div>
 </section>
-
-<!-- <section class="section">
+<section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Results</h2>
+    <h2 class="title is-3 has-text-centered">More Results</h2>
     
     <div class="columns is-centered">
       <div class="column is-four-fifths">
         <div class="content has-text-justified">
-          <h3 class="title is-4">Interpolation Results</h3>
-          <p>
-            Our approach successfully generates smooth transitions between images, even for semantically disconnected concepts.
-          </p>
-          <img src="./static/images/intp_3.jpg" width="100%" loading="lazy">
-          <img src="./static/images/money_plot.jpg" width="100%" loading="lazy">
-        </div>
 
-        <div class="content has-text-justified">
-          <h3 class="title is-4">Visual Analogy Results</h3>
-          <p>
-            The Mood Space enables accurate visual analogies by applying the transformation direction from one pair to another.<br/>
-          </p>
-
-          <video id="teaser" controls autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/mspace_analogy.mp4"
-                    type="video/mp4">
-          </video>
-          <p>
-            Given Image A1 → Image B1, What is Image A2 → Image B2?
-          </p>
-          <img src="./static/images/analogy_4.jpg" width="100%" loading="lazy">
         </div>
       </div>
     </div>
   </div>
-</section> -->
-
-
-
+</section>
 
 
 
@@ -586,13 +586,13 @@
     <div class="columns is-centered">
       <div class="column is-four-fifths">
         <div class="content has-text-justified">
-          <h3 class="title is-4">CLIP Space Limitations</h3>
+          <h3 class="title is-4">When Baseline CLIP Space Fails</h3>
           <p>
             Baseline CLIP space interpolation fails when dealing with semantically disconnected concepts:
           </p>
           <ul>
-            <li>Duck → Toilet paper</li>
-            <li>Duck → Pixel art duck</li>
+            <li>e.g. Duck → Toilet paper</li>
+            <li>e.g. Duck → Pixel art duck</li>
           </ul>
           <img src="./static/images/intp_duck_paper.jpg" width="80%" loading="lazy">
           <img src="./static/images/clip_fail1.jpg" width="70%" loading="lazy">
@@ -600,12 +600,12 @@
         </div>
 
         <div class="content has-text-justified">
-          <h3 class="title is-4">Successful Cases</h3>
+          <h3 class="title is-4">When Baseline CLIP Space Works</h3>
           <p>
             CLIP space interpolation works well for semantically connected concepts:
           </p>
           <ul>
-            <li>Duck → Dinosaur (same pixel art style)</li>
+            <li>e.g. Duck → Dinosaur (same pixel art style)</li>
           </ul>
           <img src="./static/images/clip_work1.jpg" width="70%" loading="lazy">
           <img src="./static/images/analogy/duck_pixel_to_dinosaur_pixel_7_000.jpg" width="70%" loading="lazy">
@@ -614,9 +614,10 @@
         <div class="content has-text-justified">
           <h3 class="title is-4">Key Takeaways</h3>
           <ul>
-            <li>Mood Space finds a dense low-dimensional space to connect disconnected concepts</li>
-            <li>Vector algebra on Mood Space enables visual analogy</li>
-            <li>Efficient computation without fine-tuning</li>
+            <li>Mood Space finds a dense low-dimensional space to compress CLIP space</li>
+            <li>Mood Space connects disconnected concepts (e.g. duck -> toilet paper)</li>
+            <li>Mood Board is an interpolation interface to control the Mood Space</li>
+            <li>Mood Space only picks up most relevant concepts from Mood Board</li>
           </ul>
         </div>
       </div>
