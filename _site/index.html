@@ -198,19 +198,40 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Background</h2>
+    
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <h3 class="title is-4">What are we trying to do?</h3>
+          <ol>
+            <li><strong>Interpolation:</strong> Generate new images by interpolating between existing ones</li>
+            <li><strong>Visual Analogy:</strong> Given Image A1 → Image B1, determine what Image A2 → Image B2 should be</li>
+          </ol>
+
+          <h3 class="title is-4">What is Mood Space?</h3>
+          <p>
+            Mood Space is our solution to enable smooth transitions between visually disconnected concepts (e.g. duck -> toilet paper).
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <img src="./static/images/mspace_dogfish.jpg" height="100%">
       <h2 class="subtitle has-text-centered">
-        <b>What are we trying to do?  -- Interpolate</b> <br/>
+        <b>Interpolation Example</b> <br/>
         We interpolate between images to generate a new image.
       </h2>
     </div>
   </div>
 </section>
-
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -220,14 +241,36 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <b>What are we trying to do?  -- Visual Analogy</b> <br/>
-        Given Image A1 -> Image B1, What is Image A2 -> Image B2?
+        <b>Visual Analogy Example</b> <br/>
+        Given Image A1 → Image B1, What is Image A2 → Image B2?
       </h2>
     </div>
   </div>
 </section>
 
 
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Technical Approach</h2>
+    
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <h3 class="title is-4">How does it work?</h3>
+          <p>
+            Our approach involves several key components:
+          </p>
+          <ol>
+            <li><strong>Image Conditioned Diffusion Model:</strong> Using IP-Adapter and CLIP embeddings for interpolation</li>
+            <li><strong>Mood Space:</strong> A low-dimensional dense space that enables linear interpolation</li>
+            <li><strong>Spectral Clustering:</strong> Used to compute the underlying structure of the Mood Space</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -264,8 +307,6 @@
   </div>
 </section>
 
-
-
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -274,19 +315,18 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <b>Why CLIP embedding interpolation fails?</b> <br/>
+        <b>Limitations of CLIP Space</b> <br/>
         There's holes in the CLIP embedding space, especially for objects that are un-related (e.g. duck and toilet paper).
       </h2>
     </div>
   </div>
 </section>
 
-
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <details>
-        <summary class="button is-link is-light"><h2 class="subtitle">[Click to expand <span class="details-icon">▼</span>] How to interpolate pixel location</h2></summary>
+        <summary class="button is-link is-light"><h2 class="subtitle">[Click to expand <span class="details-icon">▼</span>] Spatial Interpolation Details</h2></summary>
         <div class="content">
           <video id="teaser" controls muted loop playsinline height="100%">
             <source src="./static/videos/how_intp_spatial.mp4"
@@ -306,15 +346,26 @@
   </div>
 </section>
 
-
-<div class="columns is-centered has-text-centered">
-  <div class="column is-four-fifths">
-    <br/>
-    <br/>
-    <h2 class="title is-3">Mood Space</h2>
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Mood Space</h2>
+    
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            Our solution to the limitations of CLIP space is the Mood Space, which:
+          </p>
+          <ul>
+            <li>Connects disconnected visual concepts</li>
+            <li>Provides a low-dimensional dense space for linear interpolation</li>
+            <li>Enables efficient sampling without fine-tuning</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-
+</section>
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -324,9 +375,8 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <b>Mood Space</b> <br/>
-        We propose a "Mood Space" to connect disconnected visual concepts (e.g. duck and toilet paper). <br/>
-        Mood Space is a low-dimensional dense space that can be linearly interpolated nicely. <br/>
+        <b>Mood Space Introduction</b> <br/>
+        A low-dimensional dense space that connects disconnected visual concepts.
       </h2>
     </div>
   </div>
@@ -341,13 +391,11 @@
       </video>
       <h2 class="subtitle has-text-centered">
         <b>Mood Space Interpolation</b> <br/>
-        Mood Space linear interpolation transformed back to CLIP space, is a curved path. <br/>
-        Interpolation follows the existing data manifold, so it don't hit the holes.
+        Linear interpolation in Mood Space transforms to a curved path in CLIP space, avoiding holes.
       </h2>
     </div>
   </div>
 </section>
-
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -357,26 +405,24 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <b>Mood Space Methods</b> <br/>
-        Mood Space is transformed by learned point-wise MLP. <br/>
-        Trained with spectral clustering and reconstruction loss. <br/>
+        <b>Mood Space Implementation</b> <br/>
+        Transformed by learned point-wise MLP, trained with spectral clustering and reconstruction loss.
       </h2>
     </div>
   </div>
 </section>
 
-
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <details>
-        <summary class="button is-link is-light"><h2 class="subtitle">[Click to expand <span class="details-icon">▼</span>] Is spectral clustering (NCut) differentiable?</h2></summary>
+        <summary class="button is-link is-light"><h2 class="subtitle">[Click to expand <span class="details-icon">▼</span>] Spectral Clustering Details</h2></summary>
         <div class="content">
           <video id="teaser" controls muted loop playsinline height="100%">
             <source src="./static/videos/ncut_diff.mp4"
                     type="video/mp4">
           </video>
-          <b>NCut is differentiable. </b> <br/>
+          <b>NCut is differentiable.</b> <br/>
           SVD Eigvec can be shifted or rotated, we use invariant loss (outter product of eigvec). <br/>
           We use partially shifted eigvec to prevent large window shifts. <br/>
         </div>
@@ -384,7 +430,6 @@
     </div>
   </div>
 </section>
-
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -394,47 +439,45 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <b>Mood Board: control the Mood Space</b> <br/>
-        NCut eigvec can be controlled by context images to compute affinity. <br/>
-        NCut eigvec will pick up the most relevant features from the context images. <br/>
+        <b>Mood Board Interface</b> <br/>
+        Control the Mood Space through context images to compute affinity and pick up relevant features.
       </h2>
     </div>
   </div>
 </section>
 
-
 <section class="section">
   <div class="container is-max-desktop">
-
-    <!-- Results. -->
+    <h2 class="title is-3 has-text-centered">Results</h2>
+    
     <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Results</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolation on Mood Space</h3>
+      <div class="column is-four-fifths">
         <div class="content has-text-justified">
+          <h3 class="title is-4">Interpolation Results</h3>
           <p>
-            Given a start image and an end image, we can interpolate on Mood Space to generate a new image.
+            Our approach successfully generates smooth transitions between images, even for semantically disconnected concepts.
           </p>
-          <img src="./static/images/intp_3.jpg" width="100%">
-          <img src="./static/images/money_plot.jpg" width="100%">
-        </div>
-        <br/>
-
-
-        <h3 class="title is-4">Visual Analogy on Mood Space</h3>
-        <div class="content has-text-justified">
-          <p>
-            Given Image A1 -> Image B1, A1 -> B1 defines a interpolation direction in Mood Space. <br/>
-            We apply A1 -> B1 direction to generate Image A2 -> Image B2.
-          </p>
-          <img src="./static/images/analogy_4.jpg" width="100%">
+          <img src="./static/images/intp_3.jpg" width="100%" loading="lazy">
+          <img src="./static/images/money_plot.jpg" width="100%" loading="lazy">
         </div>
 
+        <div class="content has-text-justified">
+          <h3 class="title is-4">Visual Analogy Results</h3>
+          <p>
+            The Mood Space enables accurate visual analogies by applying the transformation direction from one pair to another.<br/>
+          </p>
+
+          <video id="teaser" controls autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/mspace_analogy.mp4"
+                    type="video/mp4">
+          </video>
+          <p>
+            Given Image A1 → Image B1, What is Image A2 → Image B2?
+          </p>
+          <img src="./static/images/analogy_4.jpg" width="100%" loading="lazy">
+        </div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -445,34 +488,34 @@
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-analogy_0">
-          <img poster="" id="analogy_0" src="./static/images/analogy/duck_to_duck_pixel_0_000.jpg">
+          <img poster="" id="analogy_0" src="./static/images/analogy/duck_to_duck_pixel_0_000.jpg" loading="lazy">
         </div>
         <div class="item item-analogy_1">
-          <img poster="" id="analogy_1" src="./static/images/analogy/duck_to_duck_pixel_1_000.jpg">
+          <img poster="" id="analogy_1" src="./static/images/analogy/duck_to_duck_pixel_1_000.jpg" loading="lazy">
         </div>
         <div class="item item-analogy_2">
-          <img poster="" id="analogy_2" src="./static/images/analogy/duck_to_duck_pixel_2_000.jpg">
+          <img poster="" id="analogy_2" src="./static/images/analogy/duck_to_duck_pixel_2_000.jpg" loading="lazy">
         </div>
         <div class="item item-analogy_4">
-          <img poster="" id="analogy_4" src="./static/images/analogy/duck_to_duck_pixel_5_000.jpg">
+          <img poster="" id="analogy_4" src="./static/images/analogy/duck_to_duck_pixel_5_000.jpg" loading="lazy">
         </div>
         <div class="item item-analogy_5">
-          <img poster="" id="analogy_5" src="./static/images/analogy/duck_to_duck_pixel_6_000.jpg">
+          <img poster="" id="analogy_5" src="./static/images/analogy/duck_to_duck_pixel_6_000.jpg" loading="lazy">
         </div>
         <div class="item item-analogy_6">
-          <img poster="" id="analogy_6" src="./static/images/analogy/duck_to_duck_pixel_7_000.jpg">
+          <img poster="" id="analogy_6" src="./static/images/analogy/duck_to_duck_pixel_7_000.jpg" loading="lazy">
         </div>
         <div class="item item-analogy_7">
-          <img poster="" id="analogy_7" src="./static/images/analogy/duck_pixel_to_duck_1_000.jpg">
+          <img poster="" id="analogy_7" src="./static/images/analogy/duck_pixel_to_duck_1_000.jpg" loading="lazy">
         </div>
         <div class="item item-analogy_8">
-          <img poster="" id="analogy_8" src="./static/images/analogy/duck_pixel_to_duck_9_000.jpg">
+          <img poster="" id="analogy_8" src="./static/images/analogy/duck_pixel_to_duck_9_000.jpg" loading="lazy">
         </div>
         <div class="item item-analogy_9">
-          <img poster="" id="analogy_9" src="./static/images/analogy/duck_pixel_to_dinosaur_pixel_7_000.jpg">
+          <img poster="" id="analogy_9" src="./static/images/analogy/duck_pixel_to_dinosaur_pixel_7_000.jpg" loading="lazy">
         </div>
         <div class="item item-analogy_10">
-          <img poster="" id="analogy_10" src="./static/images/analogy/duck_pixel_to_dinosaur_pixel_9_000.jpg">
+          <img poster="" id="analogy_10" src="./static/images/analogy/duck_pixel_to_dinosaur_pixel_9_000.jpg" loading="lazy">
         </div>
       </div>
     </div>
@@ -486,31 +529,31 @@
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-group_0">
-          <img poster="" id="group_0" src="./static/images/group_0.jpg">
+          <img poster="" id="group_0" src="./static/images/group_0.jpg" loading="lazy">
         </div>
         <div class="item item-group_1">
-          <img poster="" id="group_1" src="./static/images/group_1.jpg">
+          <img poster="" id="group_1" src="./static/images/group_1.jpg" loading="lazy">
         </div>
         <div class="item item-group_2">
-          <img poster="" id="group_2" src="./static/images/group_2.jpg">
+          <img poster="" id="group_2" src="./static/images/group_2.jpg" loading="lazy">
         </div>
         <div class="item item-group_3">
-          <img poster="" id="group_3" src="./static/images/group_3.jpg">
+          <img poster="" id="group_3" src="./static/images/group_3.jpg" loading="lazy">
         </div>
         <div class="item item-group_4">
-          <img poster="" id="group_4" src="./static/images/group_4.jpg">
+          <img poster="" id="group_4" src="./static/images/group_4.jpg" loading="lazy">
         </div>
         <div class="item item-group_5">
-          <img poster="" id="group_5" src="./static/images/group_5.jpg">
+          <img poster="" id="group_5" src="./static/images/group_5.jpg" loading="lazy">
         </div>
         <div class="item item-group_6">
-          <img poster="" id="group_6" src="./static/images/group_6.jpg">
+          <img poster="" id="group_6" src="./static/images/group_6.jpg" loading="lazy">
         </div>
         <div class="item item-group_7">
-          <img poster="" id="group_7" src="./static/images/group_7.jpg">
+          <img poster="" id="group_7" src="./static/images/group_7.jpg" loading="lazy">
         </div>
         <div class="item item-group_8">
-          <img poster="" id="group_8" src="./static/images/group_8.jpg">
+          <img poster="" id="group_8" src="./static/images/group_8.jpg" loading="lazy">
         </div>
       </div>
     </div>
@@ -520,51 +563,48 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-
-    <!-- Analysis. -->
+    <h2 class="title is-3 has-text-centered">Analysis</h2>
+    
     <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Analysis</h2>
-
-        <h3 class="title is-4">When does baseline CLIP space interpolation fail?</h3>
+      <div class="column is-four-fifths">
         <div class="content has-text-justified">
+          <h3 class="title is-4">CLIP Space Limitations</h3>
           <p>
-            If the two images are semantically disconncted concepts, CLIP space interpolation will fail. <br/>
-            e.g. duck -> toilet paper.
+            Baseline CLIP space interpolation fails when dealing with semantically disconnected concepts:
           </p>
-          <img src="./static/images/intp_duck_paper.jpg" width="80%">
-          <p>
-            If the two images are semantically disconncted concepts, CLIP space interpolation will fail. <br/>
-            e.g. duck -> pixelart duck.
-          </p>
-          <img src="./static/images/clip_fail1.jpg" width="70%">
-          <img src="./static/images/analogy/duck_to_duck_pixel_7_000.jpg" width="70%">
-        </div>
-        <br/>
-
-        <h3 class="title is-4">When does baseline CLIP space interpolation work fine?</h3>
-        <div class="content has-text-justified">
-          <p>
-            If the two images are semantically connected concepts, CLIP space interpolation will work fine. <br/>
-            e.g. duck -> dinosaur, same pixelart style.
-          </p>
-          <img src="./static/images/clip_work1.jpg" width="70%">
-          <img src="./static/images/analogy/duck_pixel_to_dinosaur_pixel_7_000.jpg" width="70%">
-        </div>
-
-        <h3 class="title is-4">Take away on Mood Space</h3>
-        <div class="content has-text-justified">
           <ul>
-            <li>Mood Space find a dense low-dimensional space to connect disconnected concepts.</li>
-            <li>Vector algebra on Mood Space can be used for visual analogy.</li>
+            <li>Duck → Toilet paper</li>
+            <li>Duck → Pixel art duck</li>
+          </ul>
+          <img src="./static/images/intp_duck_paper.jpg" width="80%" loading="lazy">
+          <img src="./static/images/clip_fail1.jpg" width="70%" loading="lazy">
+          <img src="./static/images/analogy/duck_to_duck_pixel_7_000.jpg" width="70%" loading="lazy">
+        </div>
+
+        <div class="content has-text-justified">
+          <h3 class="title is-4">Successful Cases</h3>
+          <p>
+            CLIP space interpolation works well for semantically connected concepts:
+          </p>
+          <ul>
+            <li>Duck → Dinosaur (same pixel art style)</li>
+          </ul>
+          <img src="./static/images/clip_work1.jpg" width="70%" loading="lazy">
+          <img src="./static/images/analogy/duck_pixel_to_dinosaur_pixel_7_000.jpg" width="70%" loading="lazy">
+        </div>
+
+        <div class="content has-text-justified">
+          <h3 class="title is-4">Key Takeaways</h3>
+          <ul>
+            <li>Mood Space finds a dense low-dimensional space to connect disconnected concepts</li>
+            <li>Vector algebra on Mood Space enables visual analogy</li>
+            <li>Efficient computation without fine-tuning</li>
           </ul>
         </div>
       </div>
     </div>
-
   </div>
 </section>
-
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
