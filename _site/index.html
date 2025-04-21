@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="``I Know It When I See It'': Mood Spaces for Connecting and Expressing Visual Concepts">
+  <meta name="keywords" content="Mood Spaces">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>"I Know It When I See It": Mood Spaces for Connecting and Expressing Visual Concepts</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -20,7 +20,7 @@
     gtag('js', new Date());
 
     gtag('config', 'G-PYVRSFMDRL');
-  </script>
+  </script> -->
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -39,6 +39,30 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get all details elements
+      const detailsElements = document.querySelectorAll('details');
+      
+      // Add event listener to each details element
+      detailsElements.forEach(details => {
+        details.addEventListener('toggle', function() {
+          // Find video element within this details element
+          const videoElement = this.querySelector('video');
+          
+          if (videoElement) {
+            if (this.open) {
+              // Play video when details is opened
+              videoElement.play();
+            } else {
+              // Pause video when details is closed
+              videoElement.pause();
+            }
+          }
+        });
+      });
+    });
+  </script>
 </head>
 <body>
 
@@ -52,7 +76,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
+      <a class="navbar-item" href="https://huzeyann.github.io">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -63,17 +87,8 @@
           More Research
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
+          <a class="navbar-item" href="https://ncut-pytorch.readthedocs.io">
+            ncut-pytorch
           </a>
         </div>
       </div>
@@ -88,39 +103,34 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">"I Know It When I See It":<br/> Mood Spaces for Connecting and Expressing Visual Concepts</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="https://huzeyann.github.io">Huzheng Yang</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://k8xu.github.io"> Katherine Xu</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="https://crest.cuny.edu/our-team/michael-grossberg">Michael D. Grossberg</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              <a href="https://yutongbai.com">Yutong Bai</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="https://www.cis.upenn.edu/~jshi">Jianbo Shi</a><sup>1</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>UPenn</span>
+            <span class="author-block"><sup>2</sup>CUNY</span>
+            <span class="author-block"><sup>3</sup>UC Berkeley</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -129,27 +139,17 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="ai ai-arxiv"></i>
+                      <i class="fas fa-external-link-alt"></i>
                   </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
+                  <span>HuggingFace Demo</span>
                 </a>
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/huzeyann/mood"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -157,15 +157,7 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
+
             </div>
 
           </div>
@@ -175,79 +167,6 @@
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <section class="section">
@@ -258,48 +177,228 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Expressing complex concepts is easy when they can be labeled or quantified, but many ideas are hard to define yet instantly recognizable.  
+            We propose a Mood Board, where users convey abstract concepts with examples that hint at the intended direction of attribute changes.   
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            We compute an underlying Mood Space that 1) factors out irrelevant features and 2) finds the connections between images, thus bringing relevant concepts closer. 
+            We invent a fibration computation to compress/decompress pre-trained features into/from a compact space, 50-100x smaller. 
+            The main innovation is learning to mimic the pairwise affinity relationship of the image tokens across exemplars.   
+            To focus on the coarse-to-fine hierarchical structures in the Mood Space, 
+            we compute the top eigenvector structure from the affinity matrix and define a loss in the eigenvector space. 
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            The resulting Mood Space is locally linear and compact, allowing image-level operations, such as object averaging, visual analogy, and pose transfer, to be performed as a simple vector operation in Mood Space.  
+            Our learning is efficient in computation without any fine-tuning, needs only a few (2-20) exemplars, and takes less than a minute to learn.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
+  </div>
+</section>
 
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/mspace_dogfish.jpg" height="100%">
+      <h2 class="subtitle has-text-centered">
+        <b>What are we trying to do?  -- Interpolate</b> <br/>
+        We interpolate between images to generate a new image.
+      </h2>
     </div>
-    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" controls autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/mspace_analogy.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <b>What are we trying to do?  -- Visual Analogy</b> <br/>
+        Given Image A1 -> Image B1, What is Image A2 -> Image B2?
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" controls autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/mspace_howintp.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <b>How to interpolate?</b> <br/>
+        Image conditioned Diffusion Model (IP-Adapter), CLIP embedding are interpolated.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <details>
+        <summary class="button is-link is-light"><h2 class="subtitle">[Click to expand <span class="details-icon">▼</span>] Why VQ-VAE interpolation doesn't work well</h2></summary>
+        <div class="content">
+          <video id="teaser" controls muted loop playsinline height="100%">
+            <source src="./static/videos/how_not_intep.mp4"
+                    type="video/mp4">
+          </video>
+          <b>Why does VQVAE interpolation work poorly?</b> <br/>
+          VQVAE embedding 1. is not seperating image semantics, 2. does not repair errors. <br/>
+          <b>Why does Diffusion CLIP interpolation work better?</b> <br/>
+          CLIP embedding is seperating image semantics, and Diffusion Model can repair errors. <br/>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" controls autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/why_clip_fail.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <b>Why CLIP embedding interpolation fails?</b> <br/>
+        There's holes in the CLIP embedding space, especially for objects that are un-related (e.g. duck and toilet paper).
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <details>
+        <summary class="button is-link is-light"><h2 class="subtitle">[Click to expand <span class="details-icon">▼</span>] How to interpolate pixel location</h2></summary>
+        <div class="content">
+          <video id="teaser" controls muted loop playsinline height="100%">
+            <source src="./static/videos/how_intp_spatial.mp4"
+                    type="video/mp4">
+          </video>
+          <b>How to interpolate pixel location?</b> <br/>
+          Step1. cluster into super-pixels (DINO feature clustering). <br/>
+          Step2. match super-pixels (Hungarian matching). <br/>
+          Step3. interpolate super-pixels (CLIP embeddings). <br/>
+          <b>How to move object spatially?</b> <br/>
+          Because CLIP embedding in Diffusion cross-attention is permutation invariant, <br/>
+          We can just interpolate the super-pixels so that the object is spatially moved. <br/>
+          Diffusion model relies on the intrinsic spatial feature inside the CLIP embedding. <br/>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <br/>
+    <br/>
+    <h2 class="title is-3">Mood Space</h2>
+  </div>
+</div>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" controls autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/mspace_intro.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <b>Mood Space</b> <br/>
+        We propose a "Mood Space" to connect disconnected visual concepts (e.g. duck and toilet paper). <br/>
+        Mood Space is a low-dimensional dense space that can be linearly interpolated nicely. <br/>
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" controls autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/m1.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <b>Mood Space Interpolation</b> <br/>
+        Mood Space linear interpolation transformed back to CLIP space, is a curved path. <br/>
+        Interpolation follows the existing data manifold, so it don't hit the holes.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" controls autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/mspace_compress.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <b>Mood Space Methods</b> <br/>
+        Mood Space is transformed by learned point-wise MLP. <br/>
+        Trained with spectral clustering and reconstruction loss. <br/>
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <details>
+        <summary class="button is-link is-light"><h2 class="subtitle">[Click to expand <span class="details-icon">▼</span>] Is spectral clustering (NCut) differentiable?</h2></summary>
+        <div class="content">
+          <video id="teaser" controls muted loop playsinline height="100%">
+            <source src="./static/videos/ncut_diff.mp4"
+                    type="video/mp4">
+          </video>
+          <b>NCut is differentiable. </b> <br/>
+          SVD Eigvec can be shifted or rotated, we use invariant loss (outter product of eigvec). <br/>
+          We use partially shifted eigvec to prevent large window shifts. <br/>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" controls autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/mood_board.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <b>Mood Board: control the Mood Space</b> <br/>
+        NCut eigvec can be controlled by context images to compute affinity. <br/>
+        NCut eigvec will pick up the most relevant features from the context images. <br/>
+      </h2>
+    </div>
   </div>
 </section>
 
@@ -307,135 +406,161 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
+    <!-- Results. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
+        <h2 class="title is-3">Results</h2>
 
         <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+        <h3 class="title is-4">Interpolation on Mood Space</h3>
         <div class="content has-text-justified">
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
+            Given a start image and an end image, we can interpolate on Mood Space to generate a new image.
           </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
+          <img src="./static/images/intp_3.jpg" width="100%">
+          <img src="./static/images/money_plot.jpg" width="100%">
         </div>
         <br/>
-        <!--/ Interpolating. -->
 
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+
+        <h3 class="title is-4">Visual Analogy on Mood Space</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+            Given Image A1 -> Image B1, A1 -> B1 defines a interpolation direction in Mood Space. <br/>
+            We apply A1 -> B1 direction to generate Image A2 -> Image B2.
           </p>
+          <img src="./static/images/analogy_4.jpg" width="100%">
         </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
 
       </div>
     </div>
-    <!--/ Animation. -->
+
+  </div>
+</section>
 
 
-    <!-- Concurrent Work. -->
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-analogy_0">
+          <img poster="" id="analogy_0" src="./static/images/analogy/duck_to_duck_pixel_0_000.jpg">
+        </div>
+        <div class="item item-analogy_1">
+          <img poster="" id="analogy_1" src="./static/images/analogy/duck_to_duck_pixel_1_000.jpg">
+        </div>
+        <div class="item item-analogy_2">
+          <img poster="" id="analogy_2" src="./static/images/analogy/duck_to_duck_pixel_2_000.jpg">
+        </div>
+        <div class="item item-analogy_4">
+          <img poster="" id="analogy_4" src="./static/images/analogy/duck_to_duck_pixel_5_000.jpg">
+        </div>
+        <div class="item item-analogy_5">
+          <img poster="" id="analogy_5" src="./static/images/analogy/duck_to_duck_pixel_6_000.jpg">
+        </div>
+        <div class="item item-analogy_6">
+          <img poster="" id="analogy_6" src="./static/images/analogy/duck_to_duck_pixel_7_000.jpg">
+        </div>
+        <div class="item item-analogy_7">
+          <img poster="" id="analogy_7" src="./static/images/analogy/duck_pixel_to_duck_1_000.jpg">
+        </div>
+        <div class="item item-analogy_8">
+          <img poster="" id="analogy_8" src="./static/images/analogy/duck_pixel_to_duck_9_000.jpg">
+        </div>
+        <div class="item item-analogy_9">
+          <img poster="" id="analogy_9" src="./static/images/analogy/duck_pixel_to_dinosaur_pixel_7_000.jpg">
+        </div>
+        <div class="item item-analogy_10">
+          <img poster="" id="analogy_10" src="./static/images/analogy/duck_pixel_to_dinosaur_pixel_9_000.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-group_0">
+          <img poster="" id="group_0" src="./static/images/group_0.jpg">
+        </div>
+        <div class="item item-group_1">
+          <img poster="" id="group_1" src="./static/images/group_1.jpg">
+        </div>
+        <div class="item item-group_2">
+          <img poster="" id="group_2" src="./static/images/group_2.jpg">
+        </div>
+        <div class="item item-group_3">
+          <img poster="" id="group_3" src="./static/images/group_3.jpg">
+        </div>
+        <div class="item item-group_4">
+          <img poster="" id="group_4" src="./static/images/group_4.jpg">
+        </div>
+        <div class="item item-group_5">
+          <img poster="" id="group_5" src="./static/images/group_5.jpg">
+        </div>
+        <div class="item item-group_6">
+          <img poster="" id="group_6" src="./static/images/group_6.jpg">
+        </div>
+        <div class="item item-group_7">
+          <img poster="" id="group_7" src="./static/images/group_7.jpg">
+        </div>
+        <div class="item item-group_8">
+          <img poster="" id="group_8" src="./static/images/group_8.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Analysis. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
+        <h2 class="title is-3">Analysis</h2>
 
+        <h3 class="title is-4">When does baseline CLIP space interpolation fail?</h3>
         <div class="content has-text-justified">
           <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
+            If the two images are semantically disconncted concepts, CLIP space interpolation will fail. <br/>
+            e.g. duck -> toilet paper.
           </p>
+          <img src="./static/images/intp_duck_paper.jpg" width="80%">
           <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
+            If the two images are semantically disconncted concepts, CLIP space interpolation will fail. <br/>
+            e.g. duck -> pixelart duck.
           </p>
+          <img src="./static/images/clip_fail1.jpg" width="70%">
+          <img src="./static/images/analogy/duck_to_duck_pixel_7_000.jpg" width="70%">
+        </div>
+        <br/>
+
+        <h3 class="title is-4">When does baseline CLIP space interpolation work fine?</h3>
+        <div class="content has-text-justified">
           <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
+            If the two images are semantically connected concepts, CLIP space interpolation will work fine. <br/>
+            e.g. duck -> dinosaur, same pixelart style.
           </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
+          <img src="./static/images/clip_work1.jpg" width="70%">
+          <img src="./static/images/analogy/duck_pixel_to_dinosaur_pixel_7_000.jpg" width="70%">
+        </div>
+
+        <h3 class="title is-4">Take away on Mood Space</h3>
+        <div class="content has-text-justified">
+          <ul>
+            <li>Mood Space find a dense low-dimensional space to connect disconnected concepts.</li>
+            <li>Vector algebra on Mood Space can be used for visual analogy.</li>
+          </ul>
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
 
   </div>
 </section>
@@ -444,19 +569,14 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
+    <pre><code>coming soon!</code></pre>
   </div>
 </section>
 
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
+    <!-- <div class="content has-text-centered">
       <a class="icon-link"
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
@@ -464,21 +584,13 @@
       <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
-    </div>
+    </div> -->
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            This website is created from template from <a
+              href="https://github.com/nerfies/nerfies.github.io">nerfies</a>
           </p>
         </div>
       </div>

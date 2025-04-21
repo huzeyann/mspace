@@ -6,4 +6,7 @@ services:
       - "4000:4000"
     volumes:
       - .:/site
-    command: bundle exec jekyll serve --host 0.0.0.0 --livereload 
+    environment:
+      - JEKYLL_ENV=development
+      - FORCE_POLLING=true
+    command: bundle exec jekyll serve --host 0.0.0.0 --watch --force_polling 

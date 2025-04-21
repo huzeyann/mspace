@@ -19,12 +19,17 @@ body {
 
 
 .teaser .hero-body {
-  padding-top: 0;
+  padding-top: 2rem;
   padding-bottom: 3rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .teaser {
   font-family: 'Google Sans', sans-serif;
+}
+
+#teaser {
+  border: 1px solid black;
 }
 
 
@@ -112,19 +117,36 @@ body {
 
 .results-carousel {
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .results-carousel .item {
-  margin: 5px;
+  margin: 0 auto;
   overflow: hidden;
   border: 1px solid #bbb;
   border-radius: 10px;
   padding: 0;
   font-size: 0;
+  width: 100%;
+  max-width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.results-carousel .item img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
 }
 
 .results-carousel video {
   margin: 0;
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
 }
 
 
@@ -155,3 +177,63 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+/* Details element icon toggle */
+details summary .details-icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+details[open] summary .details-icon {
+  transform: rotate(90deg);
+}
+
+/* Ensure summary text stays centered */
+details summary {
+  display: block;
+  text-align: center;
+}
+
+details summary h2 {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+/* Ensure details element stays centered */
+details {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+/* Details content animation and styling */
+details .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, padding 0.3s ease, background-color 0.3s ease;
+  background-color: transparent;
+  border-radius: 5px;
+  text-align: left; /* Content can be left-aligned */
+}
+
+details[open] .content {
+  max-height: 2000px; /* Large enough to contain the content */
+  padding: 1.5rem;
+  background-color: #f5f5f5;
+  margin-top: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.blue-background {
+  background: linear-gradient(to right, transparent, #4286f4, transparent);
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.shadow-background {
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+
