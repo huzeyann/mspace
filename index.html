@@ -234,49 +234,6 @@
 
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">How do our methods be creative?</h2>
-  </div>
-</section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h2 class="subtitle has-text-centered">
-        <b style="font-size: 150%">Blending Creativity: connecting two distinct concepts</b> <br/>
-      </h2>
-        <video id="teaser" controls autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/mspace_intp.mp4"
-                  type="video/mp4">
-        </video>
-      
-      <img src="./static/images/mspace_dogfish.jpg" height="100%">
-
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h2 class="subtitle has-text-centered">
-        <b style="font-size: 150%">Combinational Creativity: path lifting</b> <br/>
-        <!-- Visual Analogy by Path Lifting <br/> -->
-      </h2>
-      <video id="teaser" controls autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/mspace_analogy.mp4"
-        type="video/mp4">
-      </video>
-      <p>
-        Given Image A1 → Image B1, What is Image A2 → Image B2?
-      </p>
-      <img src="./static/images/analogy_4.jpg" width="100%">
-    </div>
-  </div>
-</section>
-
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -325,6 +282,50 @@
   </div>
 </section>
 
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">How to express creativity?</h2>
+  </div>
+</section> -->
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+        <b style="font-size: 150%">Blending Creativity: connecting two distinct concepts</b> <br/>
+      </h2>
+        <video id="teaser" controls autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/mspace_intp.mp4"
+                  type="video/mp4">
+        </video>
+      
+      <img src="./static/images/mspace_dogfish.jpg" height="100%">
+
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+        <b style="font-size: 150%">Combinational Creativity: path lifting</b> <br/>
+        <!-- Visual Analogy by Path Lifting <br/> -->
+      </h2>
+      <video id="teaser" controls autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/mspace_analogy.mp4"
+        type="video/mp4">
+      </video>
+      <p>
+        Given Image A1 → Image B1, What is Image A2 → Image B2?
+      </p>
+      <img src="./static/images/analogy_4.jpg" width="100%">
+    </div>
+  </div>
+</section>
+
+
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -358,6 +359,10 @@
     </div>
   </div>
 </section>
+
+
+
+
 
 
 <section class="section">
@@ -494,7 +499,14 @@
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Results</h2>
-    
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Interpolation</h3>
+        <p>
+          Given Image A1 and Image B1, interpolate between them.
+        </p>
+      </div>
+    </div>
     <div class="columns is-centered">
         <div class="content has-text-justified">
           <img src="./static/images/intp_3.jpg" width="100%">
@@ -514,6 +526,14 @@
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h3 class="title is-4">Interpolation</h3>
+          <p>
+            Given Image A1 and Image B1, interpolate between them.
+          </p>
+        </div>
+      </div>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-group_0">
           <img poster="" id="group_0" src="./static/images/group_0.jpg" loading="lazy">
@@ -550,6 +570,17 @@
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h3 class="title is-4">Visual Analogy by Path Lifting</h3>
+          <p>
+            Given Image A1 → Image B1, What is Image A2 → Image B2? <br/>
+            A1 → B1 defines a path in the Mood Space. <br/>
+            A2 → B2 use the same path defined as A1 → B1.
+          </p>
+        </div>
+      </div>
+
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-analogy_0">
           <img poster="" id="analogy_0" src="./static/images/analogy/duck_to_duck_pixel_0_000.jpg" loading="lazy">
@@ -620,7 +651,7 @@
         </div>
 
         <div class="content has-text-justified">
-          <h3 class="title is-4">Key Takeaways</h3>
+          <h3 class="title is-4">Takeaways</h3>
           <ul>
             <li>Mood Space finds a dense low-dimensional space to compress CLIP space</li>
             <li>Mood Space connects disconnected concepts (e.g. duck -> toilet paper)</li>
